@@ -1,12 +1,3 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: Nuxt PM2
-- Package name: nuxt-pm2
-- Description: My new Nuxt module
--->
-
 # Nuxt PM2
 
 [![npm version][npm-version-src]][npm-version-href]
@@ -33,13 +24,13 @@ Nuxt PM2 is a highly efficient and practical module that simplifies the deployme
 
 ```bash
 # Using pnpm
-pnpm add -D nuxt-pm2
+pnpm add nuxt-pm2
 
 # Using yarn
-yarn add --dev nuxt-pm2
+yarn add nuxt-pm2
 
 # Using npm
-npm install --save-dev nuxt-pm2
+npm install nuxt-pm2
 ```
 
 2. Add `nuxt-pm2` to the `modules` section of `nuxt.config.ts`
@@ -62,7 +53,7 @@ npx nuxt-pm2 release
 The following are the default configurations for the application:
 
 ```json
-{
+nuxtPm2: {
   "releasesToKeep": 3, // Number of releases to keep. (Defaults to 3)
   "releasesDir": "releases",//The directory where releases are stored. (Defaults to 'releases')
   "runOnBuild": false,//Whether or not to run with npm run build || nuxt build command.

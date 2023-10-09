@@ -1,9 +1,8 @@
-import { defineNuxtModule, addPlugin, createResolver, logger, } from '@nuxt/kit'
+import { defineNuxtModule, logger, } from '@nuxt/kit'
 import fs from 'fs'
 import path from 'path'
 import os from "os"
 import { execSync } from 'child_process'
-import chalk from 'chalk'
 import { HookResult } from "@nuxt/schema";
 import { type ModuleOptions } from "./runtime/types/Options";
 import { TAG, COLORED_TAG } from "./runtime/bin/tools";
@@ -54,7 +53,7 @@ export default defineNuxtModule<ModuleOptions>({
     //@ts-ignore
     nuxt.callHook("nuxt-pm2:info", options)
 
-    const resolver = createResolver(import.meta.url)
+    //const resolver = createResolver(import.meta.url)
 
     //check fi dev or prod
     if (nuxt.options.dev) {

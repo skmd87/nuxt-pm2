@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { Command, commands } from 'commander'
+import { Command } from 'commander'
 import { release, releases, rollback } from './commands/index'
 import fs from 'fs'
 const program = new Command();

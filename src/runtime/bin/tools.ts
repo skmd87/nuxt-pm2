@@ -20,7 +20,7 @@ export async function getOptions(): Promise<ModuleOptions> {
             }
         }
     })
-    // nuxt.close()
+    nuxt.close()
     return options
 }
 
