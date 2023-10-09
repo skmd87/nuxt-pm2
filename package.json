@@ -1,6 +1,6 @@
 {
   "name": "nuxt-pm2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My new Nuxt module",
   "repository": "your-org/my-module",
   "license": "MIT",
@@ -25,12 +25,10 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "nuxt-pm2 release",
-    "lint": "eslint .",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint . --fix",
     "test": "vitest run",
-    "test:watch": "vitest watch",
-    "releases": "nuxt-pm2 releases",
-    "rollback": "nuxt-pm2 rollback"
+    "test:watch": "vitest watch"
   },
   "dependencies": {
     "@nuxt/kit": "^3.7.4",
